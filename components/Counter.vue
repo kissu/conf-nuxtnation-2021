@@ -8,10 +8,6 @@ const props = defineProps({
 })
 
 const counter = ref(props.count)
-let externalScript = document.createElement('script')
-externalScript.setAttribute('data-domain', 'nn21.kissu.io')
-externalScript.setAttribute('src', 'https://plausible.io/js/plausible.js')
-document.head.appendChild(externalScript)
 </script>
 
 <template>
