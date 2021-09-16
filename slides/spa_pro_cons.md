@@ -3,6 +3,7 @@ layout: two-cols
 ---
 
 <h1 class="!text-teal-500">Pros</h1>
+<h1 class="!text-teal-500">Pros</h1>
 
 - easy to deploy since it's static
 

@@ -17,13 +17,13 @@ How to prepare for production: `yarn generate`
   <div class="flex flex-col">
     <ri-loader-5-fill v-if="$slidev.nav.clicks === 4 || $slidev.nav.clicks === 5"
       class="absolute mt-3 text-green-500 transition duration-500 animate-spin"
-      :class="[$slidev.nav.clicks === 5 ? 'ml-8.5' : 'ml-6.5']" />
+      :class="[$slidev.nav.clicks === 5 ? 'ml-15' : 'ml-6.5']" />
     <ph-monitor-bold v-if="$slidev.nav.clicks < 6" class="w-auto h-12" />
     <ph-monitor-duotone v-if="$slidev.nav.clicks === 6" class="w-auto h-12" />
     <p class="!m-1" v-if="$slidev.nav.clicks < 6">
-      {{ $slidev.nav.clicks === 5 ? 'Hydration' : 'Browser' }}
+      {{ $slidev.nav.clicks === 5 ? 'Parse & execute' : 'Browser' }}
     </p>
-    <p class="!m-1" v-if="$slidev.nav.clicks === 6">Hydrated SPA</p>
+    <p class="!m-1" v-if="$slidev.nav.clicks === 6">SPA Ready</p>
   </div>
 
   <div class="w-24 text-center flex flex-col mx-4" v-if="$slidev.nav.clicks < 3 && $slidev.nav.clicks < 5"

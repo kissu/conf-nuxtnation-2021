@@ -14,3 +14,11 @@ Want to get an actual answer quickly? Put some **minimal effort** in it.
     </ul>
   </section>
 </div>
+
+<!--
+show thierry henry gif
+
+places to get help: stackoverflow, discord, discussions
+
+Releases Webpack5 is a classic issue, especially if using SASS
+-->
