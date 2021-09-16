@@ -3,7 +3,7 @@
 
 [build]
   publish = "dist"
-  command = "yarn build"
+  command = "npx playwright install && yarn build"
 
 [[redirects]]
   from = "/*"
