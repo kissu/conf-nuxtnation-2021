@@ -8,8 +8,7 @@
   "dependencies": {
     "@slidev/cli": "^0.23.0",
     "@slidev/theme-default": "0.21.0",
-    "@slidev/theme-seriph": "0.21.0",
-    "playwright-chromium": "^1.14.1"
+    "@slidev/theme-seriph": "0.21.0"
   },
   "name": "conf-nuxtnation-2021"
 }
