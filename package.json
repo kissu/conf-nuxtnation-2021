@@ -1,7 +1,7 @@
 {
   "private": true,
   "scripts": {
-    "dev": "slidev --open --remote",
+    "dev": "slidev --remote",
     "build": "slidev build",
     "export": "slidev export"
   },

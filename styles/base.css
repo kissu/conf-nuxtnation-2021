@@ -1,0 +1,14 @@
+/* .slidev-layout h1 {
+  @apply text-purple-300;
+} */
+h1, h2, h3, h4, p, div, a {
+  @apply font-sans m-0;
+}
+.dark #slide-content,
+.slidev-layout.cover,
+.slidev-layout.intro {
+  background-color: hsl(192.7, 96.3%, 10.6%);
+}
+.slidev-layout {
+  @apply py-8;
+}

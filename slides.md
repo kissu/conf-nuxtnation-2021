@@ -1,187 +1,85 @@
 ---
-# try also 'default' to start simple
+title: 'Understand the hard parts of Nuxt'
 theme: seriph
+
+# fonts:
+  # sans: '"DM Sans"'
+
+download: true
 # random image from a curated Unsplash collection by Anthony
 # like them? see https://unsplash.com/collections/94734566/slidev
-background: https://w.wallhaven.cc/full/2e/wallhaven-2eexlm.png
+background: https://images.unsplash.com/photo-1477346611705-65d1883cee1e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80
+
+drawings:
+  enabled: dev
+# Photo by <a href="https://unsplash.com/@heytowner?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">JOHN TOWNER</a> on <a href="https://unsplash.com/s/photos/mountains?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+
 # apply any windi css classes to the current slide
 class: 'text-center'
 # https://sli.dev/custom/highlighters.html
 highlighter: shiki
 # show line numbers in code blocks
 lineNumbers: false
+colorSchema: 'dark'
 # some information about the slides, markdown enabled
 info: |
   ## Slidev Starter Template
   Presentation slides for developers.
 
   Learn more at [Sli.dev](https://sli.dev)
+src: ./slides/index.md
 ---
 
-# Understand the hard parts of Nuxt
-
-<!-- <div class="pt-12">
-  <span @click="$slidev.nav.next" class="px-2 py-1 rounded cursor-pointer" hover="bg-white bg-opacity-10">
-    Konstantin BIFERT
-  </span>
-</div> -->
-
-<p class="block">Join us at <img style="margin: 0 5px;" src="/images/nuxtnation.svg"> during the 15th and 16th September</p>
-
-
-<!-- <div class="abs-br m-6 flex gap-2">
-  <button @click="$slidev.nav.openInEditor()" title="Open in Editor" class="text-xl icon-btn opacity-50 !border-none !hover:text-white">
-    <carbon:edit />
-  </button>
-  <a href="https://github.com/slidevjs/slidev" target="_blank" alt="GitHub"
-    class="text-xl icon-btn opacity-50 !border-none !hover:text-white">
-    <carbon-logo-github />
-  </a>
-</div> -->
-
-
-<!--
-The last comment block of each slide will be treated as slide notes. It will be visible and editable in Presenter Mode along with the slide. [Read more in the docs](https://sli.dev/guide/syntax.html#notes)
--->
-
-<style>
-.slidev-layout {
-  padding: 0 !important;
-}
-.block {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 2rem;
-}
-</style>
-
+---
+src: ./slides/talk_content.md
 ---
 
-# Content of my talk
-
-- explain various target/srr modes with some visuals
-- explain DOM hydration fail and how to fix it
-- talk about plugins (client vs server), like the window/undefined issues
-
-# Maybe
-- how to properly mutate things in vuex?
-- difference between asyncData/fetch?
-- lifecycle?
-- talk about the context in plugins/middlewares?
-- how to inject some 3rd party/vanilla JS code to Nuxt?
-- explain the various directories + `nuxt.config.js` keys?
-
-# Closing?
-- talk about masteringNuxt + Nuxt discussions
-- debug locally, try to host on Heroku/`Netlify/drop`
-- how to access the Vue instance and use it efficiently
-- show how/where to ask for help
-
-# Could be nice
-- nuxt/auth
-- eslint/prettier?
-
-
+---
+src: ./slides/rendering_modes.md
 ---
 
-# What is Slidev?
-
-Slidev is a slides maker and presenter designed for developers, consist of the following features
-
-- 📝 **Text-based** - focus on the content with Markdown, and then style them later
-- 🎨 **Themable** - theme can be shared and used with npm packages
-- 🧑‍💻 **Developer Friendly** - code highlighting, live coding with autocompletion
-- 🤹 **Interactive** - embedding Vue components to enhance your expressions
-- 🎥 **Recording** - built-in recording and camera view
-- 📤 **Portable** - export into PDF, PNGs, or even a hostable SPA
-- 🛠 **Hackable** - anything possible on a webpage
-
-<br>
-<br>
-
-Read more about [Why Slidev?](https://sli.dev/guide/why)
-
-<!--
-You can have `style` tag in markdown to override the style for the current page.
-Learn more: https://sli.dev/guide/syntax#embedded-styles
--->
-
-<style>
-h1 {
-  background-color: #2B90B6;
-  background-image: linear-gradient(45deg, #4EC5D4 10%, #146b8c 20%);
-  background-size: 100%;
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -moz-text-fill-color: transparent;
-}
-</style>
-
+---
+src: ./slides/spa.md
 ---
 
-# Navigation
-
-Hover on the bottom-left corner to see the navigation's controls panel, [learn more](https://sli.dev/guide/navigation.html)
-
-### Keyboard Shortcuts
-
-|                                                     |                             |
-| --------------------------------------------------- | --------------------------- |
-| <kbd>right</kbd> / <kbd>space</kbd>                 | next animation or slide     |
-| <kbd>left</kbd>  / <kbd>shift</kbd><kbd>space</kbd> | previous animation or slide |
-| <kbd>up</kbd>                                       | previous slide              |
-| <kbd>down</kbd>                                     | next slide                  |
-
-<!-- https://sli.dev/guide/animations.html#click-animations -->
-<img
-  v-click
-  class="absolute -bottom-9 -left-7 w-80 opacity-50"
-  src="https://sli.dev/assets/arrow-bottom-left.svg"
-/>
-<p v-after class="absolute bottom-23 left-45 opacity-30 transform -rotate-10">Here!</p>
-
 ---
-layout: image-right
-image: https://source.unsplash.com/collection/94734566/1920x1080
+src: ./slides/spa_pro_cons.md
 ---
 
-# Code
+---
+src: ./slides/ssr.md
+---
 
-Use code snippets and get the highlighting directly![^1]
+---
+src: ./slides/ssr_pro_cons.md
+---
 
-```ts {all|2|1-6|9|all}
-interface User {
-  id: number;
-  firstName: string;
-  lastName: string;
-  role: string
-}
+---
+src: ./slides/ssg.md
+---
 
-function updateUser(id: number, update: User) {
-  const user = getUser(id)
-  const newUser = {...user, ...update}
-  saveUser(id, newUser)
-}
-```
+---
+src: ./slides/ssg_pro_cons.md
+---
 
-<arrow v-click="3" x1="400" y1="420" x2="230" y2="330" color="#564" width="3" arrowSize="1" />
+---
+src: ./slides/ssg_additional.md
+---
 
-[^1]: [Learn More](https://sli.dev/guide/syntax.html#line-highlighting)
+---
+src: ./slides/which_to_choose.md
+---
 
-<style>
-.footnotes-sep {
-  @apply mt-20 opacity-10;
-}
-.footnotes {
-  @apply text-sm opacity-75;
-}
-.footnote-backref {
-  display: none;
-}
-</style>
+---
+src: ./slides/debug_rendering.md
+---
 
+---
+src: ./slides/debug_next.md
+---
+
+---
+src: ./slides/ask_for_help.md
 ---
 
 # Components
@@ -263,27 +161,27 @@ Animations are powered by [@vueuse/motion](https://motion.vueuse.org/).
 </div>
 ```
 
-<div class="w-60 relative mt-6">
+<div class="relative mt-6 w-60">
   <div class="relative w-40 h-40">
     <img
       v-motion
       :initial="{ x: 800, y: -100, scale: 1.5, rotate: -50 }"
       :enter="final"
-      class="absolute top-0 left-0 right-0 bottom-0"
+      class="absolute top-0 bottom-0 left-0 right-0"
       src="https://sli.dev/logo-square.png"
     />
     <img
       v-motion
       :initial="{ y: 500, x: -100, scale: 2 }"
       :enter="final"
-      class="absolute top-0 left-0 right-0 bottom-0"
+      class="absolute top-0 bottom-0 left-0 right-0"
       src="https://sli.dev/logo-circle.png"
     />
     <img
       v-motion
       :initial="{ x: 600, y: 400, scale: 2, rotate: 100 }"
       :enter="final"
-      class="absolute top-0 left-0 right-0 bottom-0"
+      class="absolute top-0 bottom-0 left-0 right-0"
       src="https://sli.dev/logo-triangle.png"
     />
   </div>
