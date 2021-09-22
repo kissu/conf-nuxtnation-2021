@@ -18,9 +18,9 @@ Here's a list of cool things that can be useful to debug faster:
 
 <h1 class="!text-green-900 mt-4">ESlint (+ Prettier)</h1>
 
-- ESlint can help you on a LOT of common issues
+- ESlint can help you on a LOT of common issues, here's a [how to quickstart](https://stackoverflow.com/a/68880413/8816585) for Nuxt
 - Give a read to the [Vue.js style guide](https://vuejs.org/v2/style-guide/) if not done yet
-- Prettier can help to improve the readability a lot, here's a [how to quickstart](https://stackoverflow.com/a/68880413/8816585) for Nuxt
+- Prettier can help to improve the readability a lot
 
 </v-clicks>
 
